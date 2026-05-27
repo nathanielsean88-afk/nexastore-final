@@ -72,6 +72,12 @@ export const bannerPromos = [
   },
 ]
 
+export const getPromoByCode = (code) => {
+  return promoCodes.find(
+    (p) => p.code.toUpperCase() === code.toUpperCase()
+  ) || null
+}
+
 export const validatePromoCode = (code, amount) => {
   const promo = promoCodes.find(
     (p) => p.code.toUpperCase() === code.toUpperCase()
