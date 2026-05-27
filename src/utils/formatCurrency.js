@@ -8,6 +8,9 @@ export const formatCurrency = (amount) => {
   }).format(amount)
 }
 
+// Alias for formatCurrency — used by CheckoutPage and PaymentPage
+export const formatRupiah = formatCurrency
+
 export const formatNumber = (num) => {
   return new Intl.NumberFormat('id-ID').format(num)
 }
